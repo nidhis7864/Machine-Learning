@@ -3,12 +3,12 @@
 import matplotlib
 matplotlib.rcParams['figure.figsize'] = (12, 12)
 
-import numpy       as np
+import numpy as np
 import pickle
 import sys
 
-from matplotlib     import pyplot as plt
-from operator       import itemgetter
+from matplotlib import pyplot as plt
+from operator import itemgetter
 
 sys.path.append("ud120-projects-master/")
 
@@ -92,12 +92,12 @@ grr = pd.scatter_matrix(data_frame, alpha=0.8, c=labels_c)
 #    print "Top 3 values for feature, '{}': {}".format(feature, l[:3])
 
 
-from sklearn                  import svm, tree
-from sklearn.ensemble         import AdaBoostClassifier
-from sklearn.metrics          import precision_score, recall_score
+from sklearn  import svm, tree
+from sklearn.ensemble  import AdaBoostClassifier
+from sklearn.metrics import precision_score, recall_score
 
 sys.path.append("ud120-projects-master/")
-from tester                   import test_classifier
+from tester import test_classifier
 
 print "Trying the SVM classifier..."
 clf = svm.SVC()
@@ -113,7 +113,7 @@ test_classifier(clf, data_dict, features_list)
 
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import GridSearchCV
-from sklearn.metrics         import classification_report
+from sklearn.metrics import classification_report
 
 data = featureFormat(data_dict, features_list)
 labels, features = targetFeatureSplit(data)
